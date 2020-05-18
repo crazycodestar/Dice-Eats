@@ -1,0 +1,19 @@
+.cardHover {
+	box-shadow: none;
+	max-width: 286px;
+	height: 28rem;
+	transition: 0.5s ease;
+}
+
+.cardHover:hover {
+	box-shadow: 0px 0px 10px 1px #808080;
+}
+
+.link {
+	color: black;
+}
+
+.link:hover {
+	color: grey;
+	text-decoration: solid;
+}

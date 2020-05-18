@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { css } from "emotion";
 // css
 import sidebarView from "./styles/sidebar.module.css";
 
@@ -38,12 +37,13 @@ class Sidebar extends Component {
 	};
 
 	render() {
+		const { onClick } = this.props;
 		return (
 			<div className={sidebarView.style}>
-				<button
+				{/* <button
 					className="btn btn-warning m-2 w-5"
 					style={{ width: 40, height: 40 }}
-					// onClick={this.props.onClose}
+					onClick={onClick}
 				>
 					<h3
 						style={{
@@ -54,7 +54,7 @@ class Sidebar extends Component {
 					>
 						+
 					</h3>
-				</button>
+				</button> */}
 				{this.state.filter.map((filter) => (
 					<div
 						className="w-90"
@@ -80,7 +80,9 @@ class Sidebar extends Component {
 										style={{ color: "#808080", cursor: "pointer" }}
 										key={setting}
 									>
-										<a href="#">{setting}</a>
+										<a href="#" className={sidebarView.link}>
+											{setting}
+										</a>
 									</li>
 								))}
 							</ul>

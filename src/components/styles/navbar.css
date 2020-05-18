@@ -1,0 +1,11 @@
+.list {
+	float: left;
+}
+
+.listLink {
+	color: black;
+}
+
+.listLink:hover {
+	text-decoration: solid;
+}

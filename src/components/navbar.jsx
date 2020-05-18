@@ -1,13 +1,17 @@
 import React from "react";
-import navigation from "./styles/navbar.module.css";
+import "./styles/navbar.css";
 
 const Navbar = (props) => {
-	const listings = ["Home", "checkout", "Profile", "Extra"];
+	const listings = ["Home", "Checkout", "Profile", "FAQ"];
 
 	return (
 		<nav
-			className="navbar fixed-top navbar-light bg-light"
-			style={{ borderBottom: "1px solid #c0c0c0", display: "flex" }}
+			className="navbar fixed-top navbar-light"
+			style={{
+				borderBottom: "1px solid #c0c0c0",
+				display: "flex",
+				backgroundColor: "#f5f5f5",
+			}}
 		>
 			<h4 className="navbar-brand" href="#">
 				Dice Eats
@@ -33,10 +37,10 @@ const Navbar = (props) => {
 				</div>
 			</div>
 			<div>
-				<ul style={{ listStyle: "none", float: "left", padding: 0 }}>
+				<ul style={{ listStyle: "none", float: "left" }}>
 					{listings.map((listItem) => (
-						<li className={navigation.list}>
-							<a className="nav-link" href="#" style={{ color: "inherit" }}>
+						<li className="list">
+							<a className="nav-link navbar-dark listLink" href="#">
 								{listItem}
 							</a>
 						</li>

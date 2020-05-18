@@ -4,21 +4,39 @@ import React, { useState } from "react";
 import Items from "./components/items";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sideBar";
+import HambugerMenu from "./components/hambugerMenu";
 
 // css
-import sideView from "./components/styles/app.module.css";
+import "./components/styles/app.css";
 
 function App() {
+	const [showSidebar, setShowSideBar] = useState(true);
+
 	return (
 		<React.Fragment>
 			<Navbar />
+			<HambugerMenu
+				onClick={() => {
+					showSidebar ? setShowSideBar(false) : setShowSideBar(true);
+				}}
+			/>
 			<div style={{ marginTop: 70 }}>
-				<div className={sideView.sideBarStyle}>
+				<div
+					className={`sideBarStyle ${
+						showSidebar == true ? "floatSideBarShow" : "floatSideBarHide"
+					}`}
+				>
 					<Sidebar
-					// onClose={handleClose}
+						onClick={() => {
+							setShowSideBar(false);
+						}}
 					/>
 				</div>
-				<div className={sideView.floatRight} style={{ width: "83%" }}>
+				<div
+					className={`transitionEffect ${
+						showSidebar == true ? "itemShopShow" : "itemShopHide"
+					}`}
+				>
 					<Items />
 				</div>
 			</div>

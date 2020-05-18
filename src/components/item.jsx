@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/item.css";
 
 const Item = (props) => {
 	const handleShow = () => {
@@ -53,7 +54,7 @@ const Item = (props) => {
 	};
 	return (
 		<React.Fragment>
-			<div className="card m-1" style={{ maxWidth: "286px", height: "28rem" }}>
+			<div className="card m-1 cardHover">
 				<img
 					src={props.item.image}
 					className="card-img-top"
@@ -65,7 +66,9 @@ const Item = (props) => {
 					style={{ display: "flex", flexDirection: "column" }}
 				>
 					<h5 className="card-title">{props.item.name}</h5>
-					<p className="card-text">{props.item.info}</p>
+					<a className="card-text link" href="#">
+						{props.item.info}
+					</a>
 					<span style={{ flexGrow: 3 }} />
 					<div style={{ alignItems: "flex-end" }}>
 						<div style={{ display: "flex", flexDirection: "column-reverse" }}>
@@ -73,9 +76,7 @@ const Item = (props) => {
 								className="card-text"
 								style={{ float: "right", order: 1, alignSelf: "flex-end" }}
 							>
-								<span className="badge badge-pill badge-info">
-									{props.item.price}
-								</span>
+								<span className="badge badge-info">{props.item.price}</span>
 							</h3>
 							{handleShow()}
 						</div>

@@ -178,12 +178,6 @@ class Items extends Component {
 		this.setState({ items });
 	};
 
-	// style = {
-	// 	display: "flex",
-	// 	flexWrap: "wrap",
-	// 	justifyContent: "space-evenly",
-	// };
-
 	render() {
 		return (
 			<div class={style.style}>
