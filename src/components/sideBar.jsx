@@ -1,0 +1,114 @@
+import React, { Component } from "react";
+// import { css } from "emotion";
+
+class Sidebar extends Component {
+	state = {
+		filter: [
+			{
+				name: "Arrangement",
+				clicked: false,
+				filter: ["Popular", "pricing", "Recommended"],
+			},
+			{
+				name: "Filter Products",
+				clicked: false,
+				filter: ["Fruits", "Vegetables", "Beans", "Tubers"],
+			},
+		],
+	};
+
+	style = {
+		height: "100vh",
+		display: "flex",
+		flexDirection: "column",
+		backgroundColor: "#ffffff",
+		borderRight: "1px solid #000",
+		width: window.innerWidth < 450 ? "100%" : "138",
+		color: "red",
+		float: "left",
+		overflowY: "scroll",
+		padding: 5,
+		paddingBottom: 80,
+		paddingTop: window.innerWidth < 450 ? 60 : 15,
+	};
+
+	// window.addEventListener("resize", () => self.style = self.style);
+
+	handleShow = (handlee) => {
+		const filter = [...this.state.filter];
+		const index = this.state.filter.indexOf(handlee);
+		filter[index] = { ...handlee };
+		filter[index].clicked === true
+			? (filter[index].clicked = false)
+			: (filter[index].clicked = true);
+		this.setState({ filter });
+	};
+
+	handleDropdown = (filter) => {
+		if (!filter) {
+			return { display: "none" };
+		}
+	};
+
+	render() {
+		return (
+			<div style={this.style}>
+				<button
+					className="btn btn-warning m-2 w-5"
+					style={{ width: 40, height: 40 }}
+					// onClick={this.props.onClose}
+				>
+					<h3
+						style={{
+							transform: "rotate(45deg)",
+							position: "relative",
+							bottom: 8,
+						}}
+					>
+						+
+					</h3>
+				</button>
+				{this.state.filter.map((filter) => (
+					<div
+						className="w-90"
+						key={filter.name}
+						style={{
+							width: "100%",
+							display: "flex",
+							flexDirection: "column",
+						}}
+					>
+						<button
+							className="btn btn-outline-dark m-2 w-90"
+							style={{ height: 40, transition: "0.5s ease" }}
+							onClick={() => this.handleShow(filter)}
+						>
+							{filter.name}
+						</button>
+						<div style={this.handleDropdown(filter.clicked)}>
+							<ul style={{ listStyle: "none" }}>
+								{filter.filter.map((setting) => (
+									<li
+										className="m-2 mb-3"
+										style={{ color: "#808080", cursor: "pointer" }}
+										key={setting}
+									>
+										{setting}
+									</li>
+								))}
+							</ul>
+						</div>
+					</div>
+				))}
+				<button
+					className="btn btn-outline-dark m-2 w-90"
+					style={{ height: 40, transition: "0.5s ease" }}
+				>
+					Filter Prices
+				</button>
+			</div>
+		);
+	}
+}
+
+export default Sidebar;
