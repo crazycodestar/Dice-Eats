@@ -76,7 +76,7 @@ const Item = (props) => {
 								className="card-text"
 								style={{ float: "right", order: 1, alignSelf: "flex-end" }}
 							>
-								<span className="badge badge-info">{props.item.price}</span>
+								<span className="badge badge-info">N{props.item.price}</span>
 							</h3>
 							{handleShow()}
 						</div>
