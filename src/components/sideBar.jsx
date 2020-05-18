@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 // import { css } from "emotion";
+// css
+import sidebarView from "./styles/sidebar.module.css";
 
 class Sidebar extends Component {
 	state = {
@@ -15,21 +17,6 @@ class Sidebar extends Component {
 				filter: ["Fruits", "Vegetables", "Beans", "Tubers"],
 			},
 		],
-	};
-
-	style = {
-		height: "100vh",
-		display: "flex",
-		flexDirection: "column",
-		backgroundColor: "#ffffff",
-		borderRight: "1px solid #000",
-		width: window.innerWidth < 450 ? "100%" : "138",
-		color: "red",
-		float: "left",
-		overflowY: "scroll",
-		padding: 5,
-		paddingBottom: 80,
-		paddingTop: window.innerWidth < 450 ? 60 : 15,
 	};
 
 	// window.addEventListener("resize", () => self.style = self.style);
@@ -52,7 +39,7 @@ class Sidebar extends Component {
 
 	render() {
 		return (
-			<div style={this.style}>
+			<div className={sidebarView.style}>
 				<button
 					className="btn btn-warning m-2 w-5"
 					style={{ width: 40, height: 40 }}
@@ -93,19 +80,29 @@ class Sidebar extends Component {
 										style={{ color: "#808080", cursor: "pointer" }}
 										key={setting}
 									>
-										{setting}
+										<a href="#">{setting}</a>
 									</li>
 								))}
 							</ul>
 						</div>
 					</div>
 				))}
-				<button
-					className="btn btn-outline-dark m-2 w-90"
-					style={{ height: 40, transition: "0.5s ease" }}
+				<div
+					className="w-90"
+					key={"Filter prices"}
+					style={{
+						width: "100%",
+						display: "flex",
+						flexDirection: "column",
+					}}
 				>
-					Filter Prices
-				</button>
+					<button
+						className="btn btn-outline-dark m-2 w-90"
+						style={{ height: 40, transition: "0.5s ease" }}
+					>
+						Filter Price
+					</button>
+				</div>
 			</div>
 		);
 	}

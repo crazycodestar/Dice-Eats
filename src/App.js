@@ -5,47 +5,20 @@ import Items from "./components/items";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sideBar";
 
+// css
+import sideView from "./components/styles/app.module.css";
+
 function App() {
-	// let sideShow = true;
-
-	let sideBarStyle = {
-		position: "sticky",
-		top: 60,
-		width: window.innerWidth < 450 ? "100%" : "138",
-		float: "left",
-	};
-
-	// const handleShow = (sideBar) => {
-	// 	if (sideShow === true) {
-	// 		return sideBarStyle;
-	// 	} else {
-	// 		let sideBarStyle = { ...sideBar };
-	// 		sideBarStyle.backgroundColor = "red";
-	// 		setSideBarStyle({ sideBarStyle });
-	// 		console.log(sideBarStyle);
-	// 	}
-	// };
-
-	// const handleClose = () => {
-	// 	sideShow = false;
-	// 	handleShow(sideBarStyle);
-	// };
-
 	return (
 		<React.Fragment>
 			<Navbar />
-			<div style={{ marginTop: 60 }}>
-				<div style={sideBarStyle}>
+			<div style={{ marginTop: 70 }}>
+				<div className={sideView.sideBarStyle}>
 					<Sidebar
 					// onClose={handleClose}
 					/>
 				</div>
-				<div
-					style={{
-						paddingTop: 70,
-						marginLeft: window.innerWidth < 450 ? 0 : 140,
-					}}
-				>
+				<div className={sideView.floatRight} style={{ width: "83%" }}>
 					<Items />
 				</div>
 			</div>

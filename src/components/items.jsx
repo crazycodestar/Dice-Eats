@@ -19,6 +19,9 @@ import tangerines from "../assets/tangerines.jpg";
 import watermelon from "../assets/watermelon.jfif";
 import Item from "./item";
 
+// css
+import style from "./styles/items.module.css";
+
 class Items extends Component {
 	state = {
 		items: [
@@ -175,15 +178,15 @@ class Items extends Component {
 		this.setState({ items });
 	};
 
-	style = {
-		display: "flex",
-		flexWrap: "wrap",
-		justifyContent: "space-evenly",
-	};
+	// style = {
+	// 	display: "flex",
+	// 	flexWrap: "wrap",
+	// 	justifyContent: "space-evenly",
+	// };
 
 	render() {
 		return (
-			<div style={this.style}>
+			<div class={style.style}>
 				{this.state.items.map((item) => (
 					<Item
 						key={item.name}

@@ -29,9 +29,8 @@ const Item = (props) => {
 					</button>
 					<button
 						type="button"
-						className="btn btn-secondary"
+						className="btn btn-light"
 						style={{
-							backgroundColor: "#fff",
 							color: "#000",
 							flexGrow: 4,
 							height: 40,
@@ -54,7 +53,7 @@ const Item = (props) => {
 	};
 	return (
 		<React.Fragment>
-			<div className="card m-1" style={{ width: "18rem", height: "28rem" }}>
+			<div className="card m-1" style={{ maxWidth: "286px", height: "28rem" }}>
 				<img
 					src={props.item.image}
 					className="card-img-top"

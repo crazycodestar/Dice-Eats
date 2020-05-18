@@ -1,4 +1,5 @@
 import React from "react";
+import navigation from "./styles/navbar.module.css";
 
 const Navbar = (props) => {
 	const listings = ["Home", "checkout", "Profile", "Extra"];
@@ -12,10 +13,7 @@ const Navbar = (props) => {
 				Dice Eats
 			</h4>
 			<div>
-				<div
-					className="input-group mb-1"
-					style={{ width: window.innerWidth < 450 ? "60vw" : "40vw" }}
-				>
+				<div className="input-group mb-1" style={{ width: "40vw" }}>
 					<input
 						type="text"
 						className="form-control"
@@ -37,7 +35,7 @@ const Navbar = (props) => {
 			<div>
 				<ul style={{ listStyle: "none", float: "left", padding: 0 }}>
 					{listings.map((listItem) => (
-						<li style={{ float: "left" }}>
+						<li className={navigation.list}>
 							<a className="nav-link" href="#" style={{ color: "inherit" }}>
 								{listItem}
 							</a>
