@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+// assets
+import NavBarMenu from "./navigationMenu";
+// css
 import "./styles/navbar.css";
 
 const Navbar = (props) => {
 	const listings = ["Home", "Checkout", "Profile", "FAQ"];
+	const [showSubMenu, setShowSubMenu] = useState("hideSubMenu");
+
+	const HandleSubMenu = () => {
+		!showSubMenu ? setShowSubMenu("hideSubMenu") : setShowSubMenu("");
+	};
 
 	return (
-		<nav
-			className="navbar fixed-top navbar-light"
-			style={{
-				borderBottom: "1px solid #c0c0c0",
-				display: "flex",
-				backgroundColor: "#f5f5f5",
-			}}
-		>
+		<nav className="navbar fixed-top navbar-light BBottom">
 			<h4 className="navbar-brand" href="#">
 				Dice Eats
 			</h4>
@@ -36,16 +37,19 @@ const Navbar = (props) => {
 					</div>
 				</div>
 			</div>
-			<div>
-				<ul style={{ listStyle: "none", float: "left" }}>
+			<div className="Dflex">
+				<ul className="marginLeft" style={{ listStyle: "none", float: "left" }}>
 					{listings.map((listItem) => (
-						<li className="list">
+						<li className={`list ${showSubMenu}`}>
 							<a className="nav-link navbar-dark listLink" href="#">
 								{listItem}
 							</a>
 						</li>
 					))}
 				</ul>
+				<div className="orderEnd">
+					<NavBarMenu onClick={HandleSubMenu} />
+				</div>
 			</div>
 		</nav>
 	);

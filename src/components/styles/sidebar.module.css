@@ -1,5 +1,6 @@
 .style {
-	padding-top: 40px;
+	padding-top: 60px;
+	top: -5px;
 	height: 100vh;
 	display: flex;
 	position: fixed;
@@ -10,14 +11,20 @@
 	color: red;
 	float: left;
 	/* overflow-y: scroll; */
-	padding: 5;
 }
 
 .link {
 	color: #808080;
+	border: none;
+	background-color: white;
+	cursor: pointer;
 }
 
 .link:hover {
 	text-decoration: solid;
 	color: #000000;
+}
+
+.link:focus {
+	outline: none;
 }

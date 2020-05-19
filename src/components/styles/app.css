@@ -23,10 +23,20 @@
 .itemShopShow,
 .itemShopHide {
 	float: right;
-	width: 83%;
+	width: 97%;
 	margin-top: 6px;
 }
 
 .itemShopHide {
-	width: 97%;
+	width: 83%;
+}
+
+.fixedPlacement {
+	position: fixed;
+	/* display: flex;
+	width: 230px; */
+	justify-content: space-between;
+	left: 3px;
+	top: 80px;
+	z-index: 99;
 }

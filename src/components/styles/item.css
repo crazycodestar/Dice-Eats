@@ -1,7 +1,6 @@
 .cardHover {
 	box-shadow: none;
 	max-width: 286px;
-	height: 28rem;
 	transition: 0.5s ease;
 }
 

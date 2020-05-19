@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles/hambugerMenu.css";
+import "./styles/navigationButton.css";
 
 const HambugerMenu = (props) => {
 	const [shown, setShown] = useState(true);
@@ -11,8 +11,8 @@ const HambugerMenu = (props) => {
 
 	return (
 		<div
-			class={`hambuger ${!shown ? "change" : "hambuger"}`}
-			id="hambuger"
+			class={`Navigation ${!shown ? "changed" : "Navigation"}`}
+			id="Navigation"
 			role="button"
 			onClick={change}
 		>

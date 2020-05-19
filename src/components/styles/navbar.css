@@ -1,4 +1,5 @@
 .list {
+	transition: 0.3s ease;
 	float: left;
 }
 
@@ -8,4 +9,30 @@
 
 .listLink:hover {
 	text-decoration: solid;
+}
+
+.hideSubMenu {
+	transition: 0.3s ease;
+	top: -200px;
+	position: fixed;
+	opacity: 0;
+}
+
+.Dflex {
+	display: inline-flex;
+}
+
+.orderEnd {
+	order: 20;
+}
+
+.BBottom {
+	transition: 0.3s ease;
+	border-bottom: 1px solid #c0c0c0;
+	display: flex;
+	background-color: #f5f5f5;
+}
+
+.marginLeft {
+	margin-right: 20px;
 }

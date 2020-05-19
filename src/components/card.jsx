@@ -15,7 +15,11 @@ const Card = ({ onDecrement, onIncrement, onReset, item }) => {
 					className="btn-group m-1"
 					role="group"
 					aria-label="Basic example"
-					style={{ height: 40, display: "flex", alignItems: "flex-end" }}
+					style={{
+						height: 40,
+						display: "flex",
+						alignItems: "flex-end",
+					}}
 				>
 					<button
 						type="button"

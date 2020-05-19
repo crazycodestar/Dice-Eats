@@ -1,25 +1,24 @@
-/* hambuger menu design */
-.hambuger {
-	width: 40px;
+/* Navigation menu design */
+.Navigation {
+	width: 5px;
 	height: 32px;
-	background-color: rgba(255, 255, 255, 0);
 	cursor: pointer;
 	border-radius: 3px;
 }
 
-.hambuger div {
+.Navigation div {
 	position: relative;
 	width: 76%;
 	height: 4px;
 	background-color: #000;
 	border-radius: 2px;
 	top: 14px;
-	left: 5px;
+	left: 0px;
 	transition: 0.5s ease;
 }
 
-.hambuger div:before,
-.hambuger div:after {
+.Navigation div:before,
+.Navigation div:after {
 	content: "";
 	position: absolute;
 	z-index: 1;
@@ -32,31 +31,33 @@
 	transition: 0.5s ease;
 }
 
-.hambuger div:after {
+.Navigation div:after {
 	top: 9px;
 }
 
 /* toggle effects */
-.change {
+.changed {
 	background-color: rgba(255, 255, 255, 0);
+	width: 20;
 }
 
-.change div:before,
-.change div:after {
+.changed div:before,
+.changed div:after {
 	transform: rotate(0deg);
 	top: 0px;
 	background-color: black;
+	width: 500%;
 }
 
-.change div:after {
+.changed div:after {
 	transform: rotate(90deg);
 }
 
-.change div {
+.changed div {
 	transition: 0.5s;
 	transform: rotate(-225deg);
 }
 
-/* .change ~ .sidebar {
+/* .changed ~ .sidebar {
 	left: 0px;
 } */

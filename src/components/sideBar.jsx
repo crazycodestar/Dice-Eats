@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // css
 import sidebarView from "./styles/sidebar.module.css";
 
+import Reset from "./reset";
+
 class Sidebar extends Component {
 	state = {
 		filter: [
@@ -37,25 +39,10 @@ class Sidebar extends Component {
 	};
 
 	render() {
-		const { onClick } = this.props;
+		const { onClick, onReset } = this.props;
 		return (
 			<div className={sidebarView.style}>
-				{/* <button
-					className="btn btn-warning m-2 w-5"
-					style={{ width: 40, height: 40 }}
-					onClick={onClick}
-				>
-					<h3
-						style={{
-							transform: "rotate(45deg)",
-							position: "relative",
-							bottom: 8,
-						}}
-					>
-						+
-					</h3>
-				</button> */}
-
+				<Reset onReset={onReset} />
 				{this.state.filter.map((filter) => (
 					<div
 						className="w-90"
@@ -81,9 +68,12 @@ class Sidebar extends Component {
 										style={{ color: "#808080", cursor: "pointer" }}
 										key={setting}
 									>
-										<a href="#" className={sidebarView.link}>
+										<button
+											onClick={() => onClick(setting)}
+											className={sidebarView.link}
+										>
 											{setting}
-										</a>
+										</button>
 									</li>
 								))}
 							</ul>
