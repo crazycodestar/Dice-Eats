@@ -73,7 +73,12 @@ const Card = ({ onDecrement, onIncrement, onReset, item }) => {
 								className="card-text"
 								style={{ float: "right", order: 1, alignSelf: "flex-end" }}
 							>
-								<span className="badge badge-info">N{item.price}</span>
+								<span className="badge badge-info">
+									<span style={{ fontFamily: " DejaVu Sans, Book" }}>
+										&#8358;
+									</span>
+									{item.price}
+								</span>
 							</h3>
 							{handleShow()}
 						</div>
