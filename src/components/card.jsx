@@ -1,14 +1,11 @@
 import React from "react";
 import "./styles/item.css";
 
-const Item = (props) => {
+const Card = ({ onDecrement, onIncrement, onReset, item }) => {
 	const handleShow = () => {
-		if (props.item.amount < 1) {
+		if (item.amount < 1) {
 			return (
-				<button
-					onClick={() => props.onIncrement(props.item)}
-					className="btn btn-primary"
-				>
+				<button onClick={() => onIncrement(item)} className="btn btn-primary">
 					Add to Cart
 				</button>
 			);
@@ -23,7 +20,7 @@ const Item = (props) => {
 					<button
 						type="button"
 						className="btn btn-secondary"
-						onClick={() => props.onDecrement(props.item)}
+						onClick={() => onDecrement(item)}
 						style={{ flexGrow: 1, height: 40 }}
 					>
 						<h5>-</h5>
@@ -36,14 +33,14 @@ const Item = (props) => {
 							flexGrow: 4,
 							height: 40,
 						}}
-						onClick={() => props.onReset(props.item)}
+						onClick={() => onReset(item)}
 					>
-						<h5>{props.item.amount}</h5>
+						<h5>{item.amount}</h5>
 					</button>
 					<button
 						type="button"
 						className="btn btn-secondary"
-						onClick={() => props.onIncrement(props.item)}
+						onClick={() => onIncrement(item)}
 						style={{ flexGrow: 1, height: 40 }}
 					>
 						<h5>+</h5>
@@ -56,7 +53,7 @@ const Item = (props) => {
 		<React.Fragment>
 			<div className="card m-1 cardHover">
 				<img
-					src={props.item.image}
+					src={item.image}
 					className="card-img-top"
 					alt="..."
 					style={{ cursor: "pointer" }}
@@ -65,9 +62,9 @@ const Item = (props) => {
 					className="card-body"
 					style={{ display: "flex", flexDirection: "column" }}
 				>
-					<h5 className="card-title">{props.item.name}</h5>
+					<h5 className="card-title">{item.name}</h5>
 					<a className="card-text link" href="#">
-						{props.item.info}
+						{item.info}
 					</a>
 					<span style={{ flexGrow: 3 }} />
 					<div style={{ alignItems: "flex-end" }}>
@@ -76,7 +73,7 @@ const Item = (props) => {
 								className="card-text"
 								style={{ float: "right", order: 1, alignSelf: "flex-end" }}
 							>
-								<span className="badge badge-info">N{props.item.price}</span>
+								<span className="badge badge-info">N{item.price}</span>
 							</h3>
 							{handleShow()}
 						</div>
@@ -87,4 +84,4 @@ const Item = (props) => {
 	);
 };
 
-export default Item;
+export default Card;

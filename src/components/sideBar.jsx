@@ -55,6 +55,7 @@ class Sidebar extends Component {
 						+
 					</h3>
 				</button> */}
+
 				{this.state.filter.map((filter) => (
 					<div
 						className="w-90"
