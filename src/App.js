@@ -16,6 +16,7 @@ class App extends Component {
 	state = {
 		showSidebar: true,
 		items: itemsAsset,
+		searchBox: null,
 	};
 
 	handleIncrement = (item) => {
@@ -63,11 +64,25 @@ class App extends Component {
 		this.setState({ items: itemsAsset });
 	};
 
+	handleTextChange = (event) => {
+		const searchBox = event.target.value;
+		this.setState({ searchBox });
+	};
+
+	handleSearchSummit = () => {
+		const items = itemsAsset.filter((item) =>
+			item.name.toLowerCase().includes(this.state.searchBox.toLowerCase())
+		);
+		this.setState({ items });
+	};
 	render() {
 		return (
 			<React.Fragment>
 				<div className={`navigation navShow`}>
-					<Navbar />
+					<Navbar
+						onChange={this.handleTextChange}
+						onClick={this.handleSearchSummit}
+					/>
 				</div>
 				<div className="fixedPlacement">
 					<HambugerMenu onClick={this.handleSideBar} />

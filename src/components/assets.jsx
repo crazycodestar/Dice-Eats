@@ -3,7 +3,7 @@ import lemon from "../assets/lemon.jpg";
 import apple from "../assets/apple.jpg";
 import banana from "../assets/banana.jpg";
 import strawberry from "../assets/strawberry.jpg";
-import tomato from "../assets/tomato.jfif";
+// import tomato from "../assets/tomato.jfif";
 import onion from "../assets/onions.jfif";
 import potato from "../assets/potato.jfif";
 import carrot from "../assets/carrot.jfif";
@@ -17,6 +17,8 @@ import orange from "../assets/orange.jfif";
 import pineapple from "../assets/pineapple.jfif";
 import tangerines from "../assets/tangerines.jpg";
 import watermelon from "../assets/watermelon.jfif";
+import beans from "../assets/beans.jpg";
+import tomatoes from "../assets/tomatoes.jfif";
 
 const items = [
 	{
@@ -58,14 +60,6 @@ const items = [
 		info: "tangerines are sold in packs of five(5)",
 		price: "800",
 		foodClass: "fruits",
-	},
-	{
-		amount: 0,
-		name: "Tomato",
-		image: tomato,
-		info: "tomatoes are sold in packs of three(3)",
-		price: "1500",
-		foodClass: "vegetables",
 	},
 	{
 		amount: 0,
@@ -138,6 +132,22 @@ const items = [
 		info: "mangos are sold in packs of five(5)",
 		price: "500",
 		foodClass: "fruits",
+	},
+	{
+		amount: 0,
+		name: "Tomato",
+		image: tomatoes,
+		info: "tomatoes are sold in packs of three(3)",
+		price: "1500",
+		foodClass: "vegetables",
+	},
+	{
+		amount: 0,
+		name: "Beans",
+		image: beans,
+		info: "mangos are sold in packs of five(5)",
+		price: "500",
+		foodClass: "beans",
 	},
 	{
 		amount: 0,

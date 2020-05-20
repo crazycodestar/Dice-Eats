@@ -4,7 +4,7 @@ import NavBarMenu from "./navigationMenu";
 // css
 import "./styles/navbar.css";
 
-const Navbar = (props) => {
+const Navbar = ({ onChange, onClick }) => {
 	const listings = ["Home", "Checkout", "Profile", "FAQ"];
 	const [showSubMenu, setShowSubMenu] = useState("hideSubMenu");
 
@@ -25,12 +25,14 @@ const Navbar = (props) => {
 						placeholder="search..."
 						aria-label="search..."
 						aria-describedby="button-addon2"
+						onChange={onChange}
 					/>
 					<div className="input-group-append">
 						<button
 							className="btn btn-outline-dark"
 							type="button"
 							id="button-addon2"
+							onClick={onClick}
 						>
 							Search
 						</button>
