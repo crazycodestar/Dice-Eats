@@ -65,7 +65,7 @@ class Sidebar extends Component {
 	isClicked = (setting) => (setting.clicked ? "active" : "");
 
 	render() {
-		const { onClick, onReset } = this.props;
+		const { onReset } = this.props;
 		return (
 			<div className="style">
 				<Reset onReset={onReset} />

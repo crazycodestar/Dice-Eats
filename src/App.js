@@ -16,7 +16,7 @@ class App extends Component {
 	state = {
 		showSidebar: true,
 		items: itemsAsset,
-		searchBox: null,
+		searchBox: "",
 	};
 
 	// Card item functions
@@ -57,7 +57,7 @@ class App extends Component {
 
 	handleFilter = (setting) => {
 		let items = this.state.items;
-		if (setting != "All") {
+		if (setting !== "All") {
 			for (let item of items) {
 				if (item.foodClass.toLowerCase() === setting.toLowerCase()) {
 					item.visible = true;
@@ -72,7 +72,6 @@ class App extends Component {
 			}
 		}
 		this.setState({ items });
-		console.log(items);
 	};
 
 	handleResetFilter = () => {
@@ -123,7 +122,7 @@ class App extends Component {
 					</div>
 					<div
 						className={`transitionEffect ${
-							this.state.showSidebar == true ? "itemShopShow" : "itemShopHide"
+							this.state.showSidebar === true ? "itemShopShow" : "itemShopHide"
 						}`}
 					>
 						<Items

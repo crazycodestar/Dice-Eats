@@ -19,6 +19,7 @@ import tangerines from "../assets/tangerines.jpg";
 import watermelon from "../assets/watermelon.jfif";
 import beans from "../assets/beans.jpg";
 import tomatoes from "../assets/tomatoes.jfif";
+import strawberries from "../assets/jez-timms-CvBZ3Css97c-unsplash.jpg";
 
 const items = [
 	{
@@ -53,6 +54,15 @@ const items = [
 		visible: true,
 		name: "Strawberry",
 		image: strawberry,
+		info: "strawberries are sold in packs of ten(10)",
+		price: "5000",
+		foodClass: "fruits",
+	},
+	{
+		amount: 0,
+		visible: true,
+		name: "Strawberries",
+		image: strawberries,
 		info: "strawberries are sold in packs of ten(10)",
 		price: "5000",
 		foodClass: "fruits",

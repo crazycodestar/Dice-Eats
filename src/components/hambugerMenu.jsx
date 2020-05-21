@@ -11,7 +11,7 @@ const HambugerMenu = (props) => {
 
 	return (
 		<div
-			class={`hambuger ${!shown ? "change" : "hambuger"}`}
+			className={`hambuger ${!shown ? "change" : "hambuger"}`}
 			id="hambuger"
 			role="button"
 			onClick={change}

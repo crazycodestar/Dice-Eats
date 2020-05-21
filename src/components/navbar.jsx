@@ -42,7 +42,7 @@ const Navbar = ({ onChange, onClick }) => {
 			<div className="Dflex">
 				<ul className="marginLeft" style={{ listStyle: "none", float: "left" }}>
 					{listings.map((listItem) => (
-						<li className={`list ${showSubMenu}`}>
+						<li key={listItem} className={`list ${showSubMenu}`}>
 							<a className="nav-link navbar-dark listLink" href="#">
 								{listItem}
 							</a>

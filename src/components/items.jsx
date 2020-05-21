@@ -9,7 +9,7 @@ class Items extends Component {
 		const { onDecrement, onIncrement, onReset, items } = this.props;
 
 		return (
-			<div class={style.style}>
+			<div className={style.style}>
 				{items.map((item) => {
 					if (item.visible) {
 						return (
