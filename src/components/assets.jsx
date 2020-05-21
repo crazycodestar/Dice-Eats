@@ -23,6 +23,7 @@ import tomatoes from "../assets/tomatoes.jfif";
 const items = [
 	{
 		amount: 0,
+		visible: true,
 		name: "Lemon",
 		image: lemon,
 		info: "Lemons are sold in packs of five(5)",
@@ -31,6 +32,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Apple",
 		image: apple,
 		info: "Apples are sold in packs of ten(10)",
@@ -39,6 +41,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Banana",
 		image: banana,
 		info: "Bananas are sold in packs of ten(10)",
@@ -47,6 +50,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Strawberry",
 		image: strawberry,
 		info: "strawberries are sold in packs of ten(10)",
@@ -55,6 +59,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Tangerines",
 		image: tangerines,
 		info: "tangerines are sold in packs of five(5)",
@@ -63,6 +68,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Onions",
 		image: onion,
 		info: "onions are sold in packs of three(3)",
@@ -71,6 +77,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Potato",
 		image: potato,
 		info: "potatoes are sold in kilograms of two(2)",
@@ -79,6 +86,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Carrot",
 		image: carrot,
 		info: "carrots are sold in packs of ten(10)",
@@ -87,6 +95,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Corn",
 		image: corn,
 		info: "corns are sold in packs of five(5)",
@@ -95,6 +104,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Cucumber",
 		image: cucumber,
 		info: "cucumbers are sold in packs of five(5)",
@@ -103,6 +113,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Grape",
 		image: grape,
 		info: "grapes are sold in packs of five(5) branches",
@@ -111,6 +122,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Guava",
 		image: guava,
 		info: "guavas are sold in packs of five(5)",
@@ -119,6 +131,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Lime",
 		image: lime,
 		info: "limes are sold in packs of five(5)",
@@ -127,6 +140,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Mango",
 		image: mango,
 		info: "mangos are sold in packs of five(5)",
@@ -135,6 +149,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Tomato",
 		image: tomatoes,
 		info: "tomatoes are sold in packs of three(3)",
@@ -143,6 +158,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Beans",
 		image: beans,
 		info: "mangos are sold in packs of five(5)",
@@ -151,6 +167,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Orange",
 		image: orange,
 		info: "oranges are sold in packs of five(5)",
@@ -159,6 +176,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Pineapple",
 		image: pineapple,
 		info: "pineapples are sold in pairs of two(2)",
@@ -167,6 +185,7 @@ const items = [
 	},
 	{
 		amount: 0,
+		visible: true,
 		name: "Watermelon",
 		image: watermelon,
 		info: "watermelons are sold in pairs of two(2)",

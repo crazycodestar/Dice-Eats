@@ -10,16 +10,20 @@ class Items extends Component {
 
 		return (
 			<div class={style.style}>
-				{items.map((item) => (
-					<Card
-						key={item.name}
-						id={item.name}
-						item={item}
-						onIncrement={onIncrement}
-						onDecrement={onDecrement}
-						onReset={onReset}
-					/>
-				))}
+				{items.map((item) => {
+					if (item.visible) {
+						return (
+							<Card
+								key={item.name}
+								id={item.name}
+								item={item}
+								onIncrement={onIncrement}
+								onDecrement={onDecrement}
+								onReset={onReset}
+							/>
+						);
+					}
+				})}
 			</div>
 		);
 	}

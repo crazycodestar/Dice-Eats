@@ -19,6 +19,7 @@ class App extends Component {
 		searchBox: null,
 	};
 
+	// Card item functions
 	handleIncrement = (item) => {
 		let items = [...this.state.items];
 		let index = items.indexOf(item);
@@ -43,6 +44,7 @@ class App extends Component {
 		this.setState({ items });
 	};
 
+	// sideBar Functions
 	handleSideBar = () => {
 		let showSidebar = this.state.showSidebar;
 		if (showSidebar) {
@@ -54,25 +56,46 @@ class App extends Component {
 	};
 
 	handleFilter = (setting) => {
-		const items = itemsAsset.filter(
-			(item) => item.foodClass === setting.toLowerCase()
-		);
+		let items = this.state.items;
+		if (setting != "All") {
+			for (let item of items) {
+				if (item.foodClass.toLowerCase() === setting.toLowerCase()) {
+					item.visible = true;
+				} else {
+					item.visible = false;
+				}
+			}
+			this.setState({ items });
+		} else {
+			for (let item of items) {
+				item.visible = true;
+			}
+		}
 		this.setState({ items });
+		console.log(items);
 	};
 
 	handleResetFilter = () => {
 		this.setState({ items: itemsAsset });
 	};
 
+	// SearchBox Function
 	handleTextChange = (event) => {
 		const searchBox = event.target.value;
 		this.setState({ searchBox });
 	};
 
 	handleSearchSummit = () => {
-		const items = itemsAsset.filter((item) =>
-			item.name.toLowerCase().includes(this.state.searchBox.toLowerCase())
-		);
+		let items = [...this.state.items];
+		for (let item of items) {
+			if (
+				item.name.toLowerCase().includes(this.state.searchBox.toLowerCase())
+			) {
+				item.visible = true;
+			} else {
+				item.visible = false;
+			}
+		}
 		this.setState({ items });
 	};
 	render() {

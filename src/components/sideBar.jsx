@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // css
-import sidebarView from "./styles/sidebar.module.css";
+import "./styles/sidebar.css";
 
 import Reset from "./reset";
 
@@ -10,17 +10,29 @@ class Sidebar extends Component {
 			{
 				name: "Arrangement",
 				clicked: false,
-				filter: ["Popular", "pricing", "Recommended"],
+				filter: [
+					{ name: "Prices", clicked: false },
+					{ name: "Popular", clicked: false },
+					{ name: "Recommended", clicked: false },
+				],
 			},
 			{
 				name: "Filter Products",
 				clicked: false,
-				filter: ["Fruits", "Vegetables", "Beans", "Tubers"],
+				filter: [
+					{ name: "All", clicked: false },
+					{ name: "Fruits", clicked: false },
+					{ name: "Vegetables", clicked: false },
+					{ name: "Beans", clicked: false },
+					{ name: "Tubers", clicked: false },
+					{ name: "Grains, Beans and Nuts", clicked: false },
+					{ name: "Meat and Poultry", clicked: false },
+					{ name: "Seafood", clicked: false },
+					{ name: "Dairy Foods", clicked: false },
+				],
 			},
 		],
 	};
-
-	// window.addEventListener("resize", () => self.style = self.style);
 
 	handleShow = (handlee) => {
 		const filter = [...this.state.filter];
@@ -38,10 +50,24 @@ class Sidebar extends Component {
 		}
 	};
 
+	handleClicked = (filterMode, setting) => {
+		this.props.onClick(setting.name);
+		const filter = this.state.filter;
+		const index = filter.indexOf(filterMode);
+		for (let content of filter[index].filter) {
+			content.clicked = false;
+		}
+		const index2 = filter[index].filter.indexOf(setting);
+		filter[index].filter[index2].clicked = true;
+		this.setState({ filter });
+	};
+
+	isClicked = (setting) => (setting.clicked ? "active" : "");
+
 	render() {
 		const { onClick, onReset } = this.props;
 		return (
-			<div className={sidebarView.style}>
+			<div className="style">
 				<Reset onReset={onReset} />
 				{this.state.filter.map((filter) => (
 					<div
@@ -63,16 +89,14 @@ class Sidebar extends Component {
 						<div style={this.handleDropdown(filter.clicked)}>
 							<ul style={{ listStyle: "none" }}>
 								{filter.filter.map((setting) => (
-									<li
-										className="m-2 mb-3"
-										style={{ color: "#808080", cursor: "pointer" }}
-										key={setting}
-									>
+									<li className="listItem" key={setting.name}>
 										<button
-											onClick={() => onClick(setting)}
-											className={sidebarView.link}
+											onClick={() => {
+												this.handleClicked(filter, setting);
+											}}
+											className={`link ${this.isClicked(setting)}`}
 										>
-											{setting}
+											{setting.name}
 										</button>
 									</li>
 								))}
