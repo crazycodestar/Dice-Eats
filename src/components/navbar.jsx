@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import NavBarMenu from "./navigationMenu";
 // css
 import "./styles/navbar.css";
+import NavBarMenuOption from "./navBarMenuOption";
 
-const Navbar = ({ onChange, onClick }) => {
-	const listings = ["Home", "Checkout", "Profile", "FAQ"];
+const Navbar = ({ onChange, onClick, totalItemsBought }) => {
 	const [showSubMenu, setShowSubMenu] = useState("hideSubMenu");
 
 	const HandleSubMenu = () => {
@@ -41,13 +41,14 @@ const Navbar = ({ onChange, onClick }) => {
 			</div>
 			<div className="Dflex">
 				<ul className="marginLeft" style={{ listStyle: "none", float: "left" }}>
-					{listings.map((listItem) => (
-						<li key={listItem} className={`list ${showSubMenu}`}>
-							<a className="nav-link navbar-dark listLink" href="#">
-								{listItem}
-							</a>
-						</li>
-					))}
+					<NavBarMenuOption listItem="Home" showSubMenu={showSubMenu} />
+					<NavBarMenuOption
+						listItem="Checkout"
+						showSubMenu={showSubMenu}
+						tag={totalItemsBought}
+					/>
+					<NavBarMenuOption listItem="Profile" showSubMenu={showSubMenu} />
+					<NavBarMenuOption listItem="FAQ" showSubMenu={showSubMenu} />
 				</ul>
 				<div className="orderEnd">
 					<NavBarMenu onClick={HandleSubMenu} />

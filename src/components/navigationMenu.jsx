@@ -10,13 +10,14 @@ const HambugerMenu = (props) => {
 	};
 
 	return (
-		<div
-			className={`Navigation ${!shown ? "changed" : "Navigation"}`}
-			id="Navigation"
-			role="button"
-			onClick={change}
-		>
-			<div></div>
+		<div onClick={change} className="navigationMenuContainer">
+			<div
+				className={`Navigation ${!shown ? "changed" : "Navigation"}`}
+				id="Navigation"
+				role="button"
+			>
+				<div></div>
+			</div>
 		</div>
 	);
 };

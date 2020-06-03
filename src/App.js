@@ -18,6 +18,12 @@ class App extends Component {
 		items: itemsAsset,
 		searchBox: "",
 	};
+	constructor() {
+		super();
+		let order = itemsAsset;
+		order = order.sort((a, b) => (a.price > b.price ? 1 : -1));
+		this.setState({ items: order });
+	}
 
 	// Card item functions
 	handleIncrement = (item) => {
@@ -44,40 +50,6 @@ class App extends Component {
 		this.setState({ items });
 	};
 
-	// sideBar Functions
-	handleSideBar = () => {
-		let showSidebar = this.state.showSidebar;
-		if (showSidebar) {
-			showSidebar = false;
-		} else {
-			showSidebar = true;
-		}
-		this.setState({ showSidebar });
-	};
-
-	handleFilter = (setting) => {
-		let items = this.state.items;
-		if (setting !== "All") {
-			for (let item of items) {
-				if (item.foodClass.toLowerCase() === setting.toLowerCase()) {
-					item.visible = true;
-				} else {
-					item.visible = false;
-				}
-			}
-			this.setState({ items });
-		} else {
-			for (let item of items) {
-				item.visible = true;
-			}
-		}
-		this.setState({ items });
-	};
-
-	handleResetFilter = () => {
-		this.setState({ items: itemsAsset });
-	};
-
 	// SearchBox Function
 	handleTextChange = (event) => {
 		const searchBox = event.target.value;
@@ -97,6 +69,33 @@ class App extends Component {
 		}
 		this.setState({ items });
 	};
+
+	// sidebar functions
+	handleSideBar = () => {
+		// hambugerMenu function
+		let showSidebar = this.state.showSidebar;
+		showSidebar = !showSidebar;
+		this.setState({ showSidebar });
+	};
+
+	handleFilter = (setting) => {
+		let items = this.state.items;
+		if (setting.name !== "All") {
+			for (let item of items) {
+				if (item.foodClass.toLowerCase() === setting.name.toLowerCase()) {
+					item.visible = true;
+				} else {
+					item.visible = false;
+				}
+			}
+		} else {
+			for (let item of items) {
+				item.visible = true;
+			}
+		}
+		this.setState({ items });
+	};
+
 	render() {
 		return (
 			<React.Fragment>
@@ -104,6 +103,9 @@ class App extends Component {
 					<Navbar
 						onChange={this.handleTextChange}
 						onClick={this.handleSearchSummit}
+						totalItemsBought={
+							this.state.items.filter((a) => a.amount > 0).length
+						}
 					/>
 				</div>
 				<div className="fixedPlacement">
@@ -115,10 +117,7 @@ class App extends Component {
 							!this.state.showSidebar ? "floatSideBarShow" : "floatSideBarHide"
 						}`}
 					>
-						<Sidebar
-							onClick={this.handleFilter}
-							onReset={this.handleResetFilter}
-						/>
+						<Sidebar onClick={this.handleFilter} />
 					</div>
 					<div
 						className={`transitionEffect ${

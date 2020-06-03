@@ -28,9 +28,9 @@
 
 .BBottom {
 	transition: 0.3s ease;
-	border-bottom: 1px solid #c0c0c0;
+	border-bottom: 1px solid #fff;
 	display: flex;
-	background-color: #f5f5f5;
+	background-color: #fff;
 }
 
 .marginLeft {

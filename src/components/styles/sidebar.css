@@ -18,6 +18,8 @@
 	border: none;
 	background-color: white;
 	cursor: pointer;
+	text-align: left;
+	width: 100%;
 }
 
 .link:hover {
@@ -46,11 +48,8 @@
 }
 
 .active {
-	/* background-color: gray; */
-	/* background-color: linear-gradient(to right, blue, white); */
-	width: 100%;
+	/* background-color: linear-gradient(to right, #f5f5f5 75%, white 100%); */
 	animation: scale 0.2s forwards;
-	text-align: left;
 	background-color: #f5f5f5;
 	color: black;
 	padding: 8px 5%;

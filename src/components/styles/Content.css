@@ -1,0 +1,34 @@
+.contentContainer {
+	width: 100%;
+	height: 55px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.activeContainer {
+	height: auto;
+}
+
+.contentItem {
+	padding: 5px 10px;
+	width: 100%;
+	color: #808080;
+	cursor: pointer;
+}
+
+@keyframes borderShow {
+	from {
+		border-left: 0px;
+	}
+	to {
+		border-left: 5px solid #17a2b8;
+	}
+}
+
+.contentSelected {
+	animation: borderShow 0.2s forwards;
+	background-color: #f5f5f5;
+	color: black;
+	padding: 8px 20px;
+}

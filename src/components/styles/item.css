@@ -16,3 +16,9 @@
 	color: grey;
 	text-decoration: solid;
 }
+
+.rating {
+	width: 70px;
+	height: 25px;
+	background-color: dodgerblue;
+}

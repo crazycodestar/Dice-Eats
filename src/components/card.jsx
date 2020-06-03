@@ -64,14 +64,22 @@ const Card = ({ onDecrement, onIncrement, onReset, item }) => {
 				/>
 				<div
 					className="card-body"
-					style={{ display: "flex", flexDirection: "column" }}
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						justifyContent: "space-between",
+					}}
 				>
 					<h5 className="card-title">{item.name}</h5>
-					<a className="card-text link" href="#">
+					<a
+						className="card-text link"
+						href="https://www.youtube.com/watch?v=ELY_ak77GIU&t=104s"
+					>
 						{item.info}
 					</a>
-					<span style={{ flexGrow: 3 }} />
+					{/* <span style={{ flexGrow: 3 }} /> */}
 					<div style={{ alignItems: "flex-end" }}>
+						<div className="rating" />
 						<div style={{ display: "flex", flexDirection: "column-reverse" }}>
 							<h3
 								className="card-text"

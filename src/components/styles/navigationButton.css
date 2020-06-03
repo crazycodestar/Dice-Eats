@@ -1,8 +1,20 @@
 /* Navigation menu design */
+.navigationMenuContainer {
+	width: 35px;
+	border-radius: 50%;
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+}
+
+.navigationMenuContainer:hover {
+	background-color: #f8f4f4;
+}
+
 .Navigation {
 	width: 5px;
 	height: 32px;
-	cursor: pointer;
 	border-radius: 3px;
 }
 
@@ -57,7 +69,3 @@
 	transition: 0.5s;
 	transform: rotate(-225deg);
 }
-
-/* .changed ~ .sidebar {
-	left: 0px;
-} */
