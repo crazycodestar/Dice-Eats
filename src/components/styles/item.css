@@ -8,8 +8,14 @@
 	box-shadow: 0px 0px 10px 1px #808080;
 }
 
+.imgRestrict {
+	overflow: hidden;
+	max-height: 190px;
+}
+
 .link {
 	color: black;
+	flex: 1;
 }
 
 .link:hover {

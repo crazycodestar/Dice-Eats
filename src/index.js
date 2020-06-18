@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import Home from "./screens/home";
 import * as serviceWorker from "./serviceWorker";
 import "C:/Users/olamilekan/Downloads/stocker/node_modules/bootstrap/dist/css/bootstrap.css";
 

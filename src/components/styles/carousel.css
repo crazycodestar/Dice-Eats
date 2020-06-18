@@ -1,0 +1,9 @@
+.carousel,
+.carouselItem {
+	height: 80vh;
+}
+
+.imagePosition {
+	position: relative;
+	/* bottom: 50%; */
+}

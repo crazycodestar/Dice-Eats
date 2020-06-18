@@ -1,79 +1,46 @@
-import React, { Component } from "react";
+import React from "react";
 import lemon from "../assets/lemon.jpg";
+import apple from "../assets/apple.jpg";
+import banana from "../assets/banana.jpg";
+import { Carousel } from "react-bootstrap";
+import "./styles/carousel.css";
 
-class Carousel extends Component {
-	state = {};
-	render() {
-		return (
-			<div
-				id="carouselExampleCaptions"
-				className="carousel slide"
-				data-ride="carousel"
-			>
-				<ol className="carousel-indicators">
-					<li
-						data-target="#carouselExampleCaptions"
-						data-slide-to="0"
-						className="active"
-					></li>
-					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-					<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-				</ol>
-				<div className="carousel-inner">
-					<div
-						className="carousel-item active"
-						style={{ height: "80vh", overflow: "hidden" }}
-					>
-						<img src={lemon} className="d-block w-100" alt="..." />
-						<div className="carousel-caption d-none d-md-block">
-							<h5>First slide label</h5>
-							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-						</div>
-					</div>
-					<div className="carousel-item">
-						<img src={lemon} className="d-block w-100" alt="..." />
-						<div className="carousel-caption d-none d-md-block">
-							<h5>Second slide label</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-					</div>
-					<div className="carousel-item">
-						<img src={lemon} className="d-block w-100" alt="..." />
-						<div className="carousel-caption d-none d-md-block">
-							<h5>Third slide label</h5>
-							<p>
-								Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-							</p>
-						</div>
-					</div>
-				</div>
-				<a
-					className="carousel-control-prev"
-					href="#carouselExampleCaptions"
-					role="button"
-					data-slide="prev"
-				>
-					<span
-						className="carousel-control-prev-icon"
-						aria-hidden="true"
-					></span>
-					<span className="sr-only">Previous</span>
-				</a>
-				<a
-					className="carousel-control-next"
-					href="#carouselExampleCaptions"
-					role="button"
-					data-slide="next"
-				>
-					<span
-						className="carousel-control-next-icon"
-						aria-hidden="true"
-					></span>
-					<span className="sr-only">Next</span>
-				</a>
-			</div>
-		);
-	}
-}
+const Home = () => {
+	return (
+		<div>
+			<Carousel className={"carousel"}>
+				<Carousel.Item className={"carouselItem"}>
+					<img
+						className="d-block w-100 imagePosition "
+						src={lemon}
+						alt="First slide"
+					/>
+					<Carousel.Caption>
+						<h3>First slide label</h3>
+						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					</Carousel.Caption>
+				</Carousel.Item>
+				<Carousel.Item className={"carouselItem"}>
+					<img className="d-block w-100" src={apple} alt="second slide" />
 
-export default Carousel;
+					<Carousel.Caption>
+						<h3>Second slide label</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</Carousel.Caption>
+				</Carousel.Item>
+				<Carousel.Item className={"carouselItem"}>
+					<img className="d-block w-100" src={banana} alt="Third slide" />
+
+					<Carousel.Caption>
+						<h3>Third slide label</h3>
+						<p>
+							Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+						</p>
+					</Carousel.Caption>
+				</Carousel.Item>
+			</Carousel>
+		</div>
+	);
+};
+
+export default Home;

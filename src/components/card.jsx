@@ -56,12 +56,14 @@ const Card = ({ onDecrement, onIncrement, onReset, item }) => {
 	return (
 		<React.Fragment>
 			<div className="card m-1 cardHover">
-				<img
-					src={item.image}
-					className="card-img-top"
-					alt="..."
-					style={{ cursor: "pointer" }}
-				/>
+				<div class="imgRestrict">
+					<img
+						src={item.image}
+						className="card-img-top"
+						alt="..."
+						style={{ cursor: "pointer" }}
+					/>
+				</div>
 				<div
 					className="card-body"
 					style={{
@@ -79,7 +81,8 @@ const Card = ({ onDecrement, onIncrement, onReset, item }) => {
 					</a>
 					{/* <span style={{ flexGrow: 3 }} /> */}
 					<div style={{ alignItems: "flex-end" }}>
-						<div className="rating" />
+						<div className="rating"></div>
+
 						<div style={{ display: "flex", flexDirection: "column-reverse" }}>
 							<h3
 								className="card-text"
