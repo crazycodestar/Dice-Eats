@@ -7,3 +7,10 @@
 .amountMargin {
 	padding: 8px;
 }
+
+@media screen and (max-width: 840px) {
+	.navBarListItem {
+		width: 100vw;
+		justify-content: left;
+	}
+}

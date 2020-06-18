@@ -3,7 +3,7 @@
 	position: fixed;
 	width: 250px;
 	z-index: 20;
-	background-color: red;
+	background-color: #eeeeee;
 	transition: 0.5s ease;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .floatSideBarHide {
-	transform: translate(-250px);
+	transform: translate(-100%);
 }
 
 .transitionEffect {
@@ -29,7 +29,7 @@
 }
 
 .itemShopHide {
-	width: 83%;
+	width: 82%;
 }
 
 .fixedPlacement {
@@ -38,6 +38,13 @@
 	width: 230px; */
 	justify-content: space-between;
 	left: 3px;
-	top: 80px;
+	top: 70px;
 	z-index: 99;
+}
+
+@media screen and (max-width: 480px) {
+	.sideBarStyle {
+		position: fixed;
+		width: 100%;
+	}
 }

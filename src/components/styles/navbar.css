@@ -20,6 +20,11 @@
 
 .Dflex {
 	display: inline-flex;
+	flex-grow: 2;
+	justify-content: space-between;
+	/* margin-left: auto; */
+	max-width: 75%;
+	float: right;
 }
 
 .orderEnd {
@@ -32,8 +37,63 @@
 	display: flex;
 	background-color: #fff;
 	box-shadow: 1px 1px 10px 4px #b4b4b4;
+	max-height: 48px;
+	overflow: hidden;
 }
 
-.marginLeft {
-	margin-right: 20px;
+.spaceBetween {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.searchBox {
+	/* display: nones; */
+	/* margin-left: 12%; */
+	width: 40vw;
+}
+
+.heading {
+}
+
+.NavbarOptions {
+	display: none;
+}
+
+.showSubMenu {
+	max-height: 50%;
+}
+
+@media screen and (max-width: 840px) {
+	.NavbarOptions {
+		display: block;
+	}
+	.Dflex {
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.searchBox {
+		position: relative;
+		bottom: 42px;
+		left: 180px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.NavbarOptions {
+		display: block;
+	}
+	.Dflex {
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.searchBox {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		margin: 8px;
+		width: 90vw;
+	}
 }

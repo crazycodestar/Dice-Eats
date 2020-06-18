@@ -10,15 +10,22 @@
 
 .imgRestrict {
 	overflow: hidden;
-	max-height: 190px;
+	height: 190px;
+	text-align: center;
 }
 
-.link {
+.imgRestrict img {
+	height: 100%;
+	min-width: 100%;
+	width: auto;
+}
+
+.expandText {
 	color: black;
 	flex: 1;
 }
 
-.link:hover {
+.expandText:hover {
 	color: grey;
 	text-decoration: solid;
 }
@@ -28,3 +35,22 @@
 	height: 25px;
 	background-color: dodgerblue;
 }
+/* 
+@media screen and (max-width: 480px) {
+	.card {
+		width: 100%;
+		height: 300px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	.imgRestrict {
+		width: 40%;
+		height: 100%;
+	}
+	.card-body {
+		width: 40%;
+		height: 100%;
+	}
+} */

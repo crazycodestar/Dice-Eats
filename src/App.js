@@ -99,19 +99,16 @@ class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className={`navigation navShow`}>
-					<Navbar
-						onChange={this.handleTextChange}
-						onClick={this.handleSearchSummit}
-						totalItemsBought={
-							this.state.items.filter((a) => a.amount > 0).length
-						}
-					/>
-				</div>
+				<Navbar
+					onChange={this.handleTextChange}
+					onClick={this.handleSearchSummit}
+					totalItemsBought={this.state.items.filter((a) => a.amount > 0).length}
+				/>
+				{/* <div className={`navigation navShow`}></div> */}
 				<div className="fixedPlacement">
 					<HambugerMenu onClick={this.handleSideBar} />
 				</div>
-				<div style={{ marginTop: 70 }}>
+				<div style={{ marginTop: 40 }}>
 					<div
 						className={`sideBarStyle ${
 							!this.state.showSidebar ? "floatSideBarShow" : "floatSideBarHide"
@@ -123,6 +120,7 @@ class App extends Component {
 						className={`transitionEffect ${
 							this.state.showSidebar === true ? "itemShopShow" : "itemShopHide"
 						}`}
+						style={{ marginTop: 30 }}
 					>
 						<Items
 							onIncrement={this.handleIncrement}

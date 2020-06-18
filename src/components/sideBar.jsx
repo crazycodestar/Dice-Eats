@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import AccordionMenu from "./AccordionMenu";
+import Accordion from "react-bootstrap/Accordion";
 // css
 import "./styles/sidebar.css";
+import "./styles/Content.css";
 
-import Content from "./Content";
+// import Content from "./Content";
 
 class Sidebar extends Component {
 	state = {
@@ -44,15 +47,20 @@ class Sidebar extends Component {
 	render() {
 		return (
 			<div className="style">
-				<Content
-					filters={this.state.sortByOrder}
-					onClick={() => console.log("clicked")}
-				/>
-				<Content filters={this.state.filter} onClick={this.filterProducts} />
-				<Content
-					filters={this.state.filterPrice}
-					onClick={() => console.log("clicked")}
-				/>
+				<Accordion>
+					<AccordionMenu
+						filters={this.state.sortByOrder}
+						onClick={() => console.log("clicked")}
+					/>
+					<AccordionMenu
+						filters={this.state.filter}
+						onClick={this.filterProducts}
+					/>
+					<AccordionMenu
+						filters={this.state.filterPrice}
+						onClick={() => console.log("clicked")}
+					/>
+				</Accordion>
 			</div>
 		);
 	}

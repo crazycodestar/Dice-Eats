@@ -1,16 +1,14 @@
 import React from "react";
 import "./styles/navBarMenuOption.css";
 
-const NavBarMenuOption = ({ listItem, showSubMenu, tag = "" }) => {
+const NavBarMenuOption = ({ listItem, tag = "", onClick }) => {
 	return (
-		<li
-			key={listItem}
-			className={`navBarListItem list amountMargin ${showSubMenu}`}
-		>
+		<li key={listItem} className={`navBarListItem list amountMargin`}>
 			<a
 				className="nav-link navbar-dark listLink"
-				href="#"
+				href={`#${listItem}`}
 				style={{ padding: 0 }}
+				onClick={onClick}
 			>
 				{listItem}
 			</a>

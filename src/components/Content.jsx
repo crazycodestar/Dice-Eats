@@ -1,6 +1,5 @@
 import React from "react";
 
-import "./styles/Content.css";
 import { useState } from "react";
 import Option from "./Option";
 

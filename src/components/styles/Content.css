@@ -7,20 +7,12 @@
 
 .dormantContainer {
 	height: 0;
-	/* visibility: hidden; */
-	/* display: none; */
 	margin: 0px;
 	overflow: hidden;
-	/* transition: 0.5s ease-in-out; */
 	padding-left: 10px;
 }
 
 .activeContainer {
-	/* height: 100%; */
-	/* visibility: visible; */
-	/* display: block; */
-	/* height: 100%; */
-	/* display: block; */
 	animation-name: grow;
 	animation-duration: 0.5s;
 	animation-timing-function: ease-in-out;
@@ -43,31 +35,58 @@
 
 .noList {
 	list-style: none;
+	margin: 0;
+	padding: 0px;
+}
+
+.link {
+	color: #808080;
+	border: none;
+	background-color: white;
+	cursor: pointer;
+	text-align: left;
+	padding: 8px 20px;
+	width: 100%;
+	transition: 0.5s ease;
+}
+
+.link:hover {
+	text-decoration: solid;
+	color: #000000;
+}
+
+.link:focus {
+	outline: none;
 }
 
 .contentItem {
-	padding: 5px 10px;
+	padding: 1px 10px;
 	width: 100%;
 	color: #808080;
 	cursor: pointer;
 }
 
-@keyframes borderShow {
-	from {
-		border-left: 0px;
-	}
-	to {
-		border-left: 5px solid #17a2b8;
-	}
+.contentSelected {
+	background-color: #eeeeee;
+	color: black;
 }
 
-.contentSelected {
-	animation: borderShow 0.2s forwards;
-	background-color: #f5f5f5;
-	color: black;
-	padding: 8px 20px;
+.link:hover {
+	background-color: #eeeeee;
 }
 
 .widthLoss {
 	width: 93%;
+}
+
+.card {
+	border: 0px solid black;
+	margin: 0;
+	padding: 0;
+}
+.card-header {
+	background-color: rgba(255, 255, 255, 0);
+	border: 0px solid black;
+	margin: 0;
+	padding: 0;
 }

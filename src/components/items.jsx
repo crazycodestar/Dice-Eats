@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "C:/Users/olamilekan/Documents/GitHub/Dice-Eats/src/components/card";
+import Card from "./item";
 
 // css
 import style from "./styles/items.module.css";
