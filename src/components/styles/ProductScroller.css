@@ -1,0 +1,79 @@
+.productScroller-main {
+	position: relative;
+	/* overflow: hidden; */
+}
+
+.listings {
+	overflow: hidden;
+}
+
+.see-all-text {
+	display: flex;
+	justify-content: end;
+}
+
+.see-all {
+	margin: 5px;
+	margin-left: auto;
+}
+
+.see-all:hover {
+	text-decoration: none;
+}
+
+.ProductScroller {
+	list-style: none;
+	position: relative;
+	display: inline-flex;
+	overflow-x: auto;
+	padding-left: 0;
+	transition: 0.5s ease-out;
+	/* top: 20px; */
+	/* margin-bottom: 0; */
+	/* flex-wrap: wrap; */
+	/* justify-content: space-evenly; */
+}
+
+.related-content {
+	/* max-width: 399px; */
+	/* width: 800px; */
+	width: 286px;
+	min-height: 212px;
+	margin: 0px;
+}
+
+.arrow {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 4px 4px #f3f3f3;
+	font-size: 1.2rem;
+	top: 50%;
+	position: absolute;
+	cursor: pointer;
+}
+
+.arrow-right {
+	right: -25px;
+}
+
+.arrow-left {
+	left: -25px;
+}
+
+.arrow:active {
+	background-color: #f3f3f3;
+}
+
+@media screen and (max-width: 480px) {
+	.ProductScroller {
+		display: flex;
+	}
+	.arrow {
+		display: none;
+	}
+}

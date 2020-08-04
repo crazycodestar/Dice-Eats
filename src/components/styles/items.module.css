@@ -3,3 +3,26 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
+
+.card-dimensions {
+	width: 286px;
+	/* height: 100%; */
+}
+
+@media screen and (max-width: 480px) {
+	.style {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: left;
+	}
+
+	.card-dimensions {
+		width: 99%;
+		/* height: 300px; */
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		/* flex-wrap: wrap; */
+	}
+}

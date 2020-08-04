@@ -1,0 +1,15 @@
+.support-container {
+	display: flex;
+}
+
+.support {
+	margin: 0 5px;
+}
+
+.support-icon {
+	margin: 0 5px;
+}
+
+.fa-thumbs-down {
+	transform: translateY(2px) scaleX(-1);
+}

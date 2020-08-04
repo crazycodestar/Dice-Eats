@@ -1,58 +1,50 @@
 import React from "react";
 import "./styles/item.css";
 import Button from "./quantityButton";
+import Rating from "./Rating";
 
 const Card = ({ onDecrement, onIncrement, onReset, item }) => {
 	return (
 		<>
-			<div className="cardHover card m-1">
-				<div class="imgRestrict">
-					<img
-						src={item.image}
-						className="card-img-top"
-						alt="..."
-						style={{ cursor: "pointer" }}
-					/>
-				</div>
-				<div
-					className="card-body"
-					style={{
-						display: "flex",
-						flexDirection: "column",
-						justifyContent: "space-between",
-					}}
-				>
-					<h5 className="card-title">{item.name}</h5>
-					<a
-						className="card-text expandText"
-						href="https://www.youtube.com/watch?v=ELY_ak77GIU&t=104s"
-					>
-						{item.info}
-					</a>
-					{/* <span style={{ flexGrow: 3 }} /> */}
-					<div style={{ alignItems: "flex-end" }}>
-						<div className="rating"></div>
+			<div class="product-container">
+				<div class="product">
+					<div class="image-container">
+						<img src={item.image} alt="apple" class="product-image" />
+					</div>
 
-						<div style={{ display: "flex", flexDirection: "column-reverse" }}>
-							<h3
-								className="card-text"
-								style={{ float: "right", order: 1, alignSelf: "flex-end" }}
-							>
-								<span className="badge badge-info">
+					<div class="product-content">
+						<h5 class="product-name">{item.name}</h5>
+						<hr />
+						<div class="product-info">
+							<div class="product-price">
+								<h5>
 									<span style={{ fontFamily: " DejaVu Sans, Book" }}>
 										&#8358;
 									</span>
 									{item.price}
-								</span>
-							</h3>
-							<Button
-								onDecrement={onDecrement}
-								onIncrement={onIncrement}
-								onReset={onReset}
-								item={item}
-							/>
+								</h5>
+							</div>
+							<div className="sails-details">
+								<p>{item.info}</p>
+							</div>
+							<div className="rating-container">
+								<Rating rating={item.rating} />
+							</div>
+							<div class="product-seller">
+								<p>
+									Sold by: <span>Dice Eats</span>{" "}
+								</p>
+							</div>
 						</div>
 					</div>
+				</div>
+				<div className="product-button">
+					<Button
+						onDecrement={onDecrement}
+						onIncrement={onIncrement}
+						onReset={onReset}
+						item={item}
+					/>
 				</div>
 			</div>
 		</>

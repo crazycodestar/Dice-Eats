@@ -1,0 +1,36 @@
+.product-details {
+	background-color: #f3f3f3;
+}
+
+.content {
+	padding-top: 60px;
+	background-color: #f3f3f3;
+}
+
+.customer-feedback {
+	background-color: #f3f3f3;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.product-help {
+	border-left: 1px solid #dddddd;
+}
+
+.component {
+	margin: 0px;
+}
+
+.related {
+	padding: 0 30px;
+}
+
+.customer-comments {
+	padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+	.related {
+		padding: 0;
+	}
+}

@@ -1,0 +1,11 @@
+.info {
+	display: flex;
+	flex-direction: row;
+}
+
+.info-icon-placeholder {
+	width: 50px;
+	border-radius: 50%;
+	height: 50px;
+	background-color: dodgerblue;
+}

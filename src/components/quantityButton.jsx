@@ -4,16 +4,19 @@ const Button = ({ item, onReset, onIncrement, onDecrement }) => {
 	return (
 		<>
 			{!item.amount ? (
-				<button onClick={() => onIncrement(item)} className="btn btn-primary">
+				<button
+					onClick={() => onIncrement(item)}
+					className="btn btn-primary btn-md w-100"
+				>
 					Add to Cart
 				</button>
 			) : (
 				<div
-					className="btn-group m-1"
+					className="btn-group"
 					role="group"
 					aria-label="Basic example"
 					style={{
-						height: 40,
+						height: 38,
 						display: "flex",
 						alignItems: "flex-end",
 					}}
@@ -22,7 +25,7 @@ const Button = ({ item, onReset, onIncrement, onDecrement }) => {
 						type="button"
 						className="btn btn-secondary"
 						onClick={() => onDecrement(item)}
-						style={{ flexGrow: 1, height: 40 }}
+						style={{ flexGrow: 1, height: 38 }}
 					>
 						<h5>-</h5>
 					</button>
@@ -32,7 +35,7 @@ const Button = ({ item, onReset, onIncrement, onDecrement }) => {
 						style={{
 							color: "#000",
 							flexGrow: 4,
-							height: 40,
+							height: 38,
 						}}
 						onClick={() => onReset(item)}
 					>
@@ -42,7 +45,7 @@ const Button = ({ item, onReset, onIncrement, onDecrement }) => {
 						type="button"
 						className="btn btn-secondary"
 						onClick={() => onIncrement(item)}
-						style={{ flexGrow: 1, height: 40 }}
+						style={{ flexGrow: 1, height: 38 }}
 					>
 						<h5>+</h5>
 					</button>

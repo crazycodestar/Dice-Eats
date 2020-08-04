@@ -31,12 +31,18 @@
 	order: 20;
 }
 
+.navbar-toggler:focus {
+	outline: none;
+}
+
 .BBottom {
 	transition: 0.3s ease;
 	border-bottom: 1px solid #fff;
 	display: flex;
 	background-color: #fff;
-	box-shadow: 1px 1px 10px 4px #b4b4b4;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	/* box-shadow: 1px 1px 10px 4px #b4b4b4; */
 	max-height: 48px;
 	overflow: hidden;
 }
@@ -62,6 +68,10 @@
 
 .showSubMenu {
 	max-height: 50%;
+}
+
+.media-icon {
+	font-size: 1.2rem;
 }
 
 @media screen and (max-width: 840px) {

@@ -1,0 +1,101 @@
+.shoppingContainer {
+	display: flex;
+	width: 100%;
+	background-color: #fff;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 auto 50px;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	border-top: 1px solid #dddddd;
+}
+
+.badge-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+.itemImage {
+	width: 100%;
+	padding: 0;
+	/* height: 200px; */
+
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+}
+
+.shoppingContent {
+	padding: 5px 20px 5px 20px;
+	/* width: 100%; */
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.contentInfo {
+	margin-bottom: 10px;
+}
+
+.badge-lg {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.shopping-item-rating {
+	width: 120px;
+	height: 50px;
+}
+
+.quantity {
+	width: 200px;
+	margin-bottom: 8px;
+}
+
+.find-us {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+}
+
+.media-icons i {
+	font-size: 2rem;
+	padding: 2px;
+	margin: 2px;
+}
+
+.fa-instagram:hover {
+	background-clip: text;
+	color: transparent;
+	background-image: linear-gradient(
+		to bottom right,
+		#405de6,
+		#5851db,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#f77737,
+		#fcaf45,
+		#ffdc80
+	);
+}
+
+.fa-facebook:hover {
+	color: #4267b2;
+}
+
+.fa-twitter:hover {
+	color: #268fff;
+}

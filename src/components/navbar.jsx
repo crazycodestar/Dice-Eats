@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 // assets
-import NavBarMenu from "./navigationMenu";
-import {
-	Navbar,
-	Nav,
-	Form,
-	FormControl,
-	Button,
-	NavDropdown,
-} from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 // css
 import "./styles/navbar.css";
 import NavBarMenuOption from "./navBarMenuOption";
@@ -23,37 +15,8 @@ const NavigationBar = ({ onChange, onClick, totalItemsBought }) => {
 
 	return (
 		<>
-			{/* <Navbar expand="lg" bg="dark" variant="dark" fixed="top">
-				<Navbar.Brand href="#home">Dice Eats</Navbar.Brand>
-				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="ml-auto">
-						<Nav.Link href="#Home">Home</Nav.Link>
-						<Nav.Link href="#Profile">Profile</Nav.Link>
-						<Nav.Link href="#pricing">Pricing</Nav.Link>
-						<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.2">
-								Another action
-							</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">
-								Separated link
-							</NavDropdown.Item>
-						</NavDropdown>
-						<Nav.Link href="#features">Features</Nav.Link>
-					</Nav>
-					<Nav>
-						<Nav.Link href="#deets">More deets</Nav.Link>
-						<Nav.Link eventKey={2} href="#memes">
-							Dank memes
-						</Nav.Link>
-					</Nav>
-				</Navbar.Collapse>
-			</Navbar> */}
 			<nav
-				className={`navbar fixed-top navbar-light BBottom ${
+				className={`navbar navbar-light bg-light BBottom ${
 					showSubMenu ? "showSubMenu" : ""
 				} `}
 				style={{ padding: "0 16px" }}
@@ -83,7 +46,7 @@ const NavigationBar = ({ onChange, onClick, totalItemsBought }) => {
 									id="button-addon2"
 									onClick={onClick}
 								>
-									Search
+									<i class="fas fa-search"></i>
 								</button>
 							</div>
 						</div>
@@ -97,57 +60,27 @@ const NavigationBar = ({ onChange, onClick, totalItemsBought }) => {
 							padding: 0,
 						}}
 					>
-						<NavBarMenuOption listItem="Home" onClick={HandleSubMenu} />
-						<NavBarMenuOption
-							listItem="Checkout"
-							onClick={HandleSubMenu}
-							tag={totalItemsBought}
-						/>
-						<NavBarMenuOption listItem="Profile" onClick={HandleSubMenu} />
-						<NavBarMenuOption listItem="FAQ" onClick={HandleSubMenu} />
+						<div className="media-icon">
+							<NavBarMenuOption
+								listItem={<i class="fas fa-home"></i>}
+								onClick={HandleSubMenu}
+							/>
+							<NavBarMenuOption
+								listItem={<i class="fas fa-shopping-cart"></i>}
+								onClick={HandleSubMenu}
+								tag={totalItemsBought}
+							/>
+							<NavBarMenuOption
+								listItem={<i class="fas fa-user"></i>}
+								onClick={HandleSubMenu}
+							/>
+							<NavBarMenuOption
+								listItem={<i class="fas fa-question"></i>}
+								onClick={HandleSubMenu}
+							/>
+						</div>
 					</ul>
-					{/* <div className="orderEnd">
-						<NavBarMenu onClick={HandleSubMenu} />
-					</div> */}
 				</div>
-
-				{/* <Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="ml-auto">
-						<Nav.Link href="#Home">Home</Nav.Link>
-						<Nav.Link href="#Profile">Profile</Nav.Link>
-						<Nav.Link href="#pricing">Pricing</Nav.Link>
-						<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.2">
-								Another action
-							</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">
-								Separated link
-							</NavDropdown.Item>
-						</NavDropdown>
-						<Nav.Link href="#features">Features</Nav.Link>
-					</Nav>
-				</Navbar.Collapse> */}
-				{/* <div className="Dflex">
-					<ul
-						className="marginLeft"
-						style={{ listStyle: "none", float: "left" }}
-					>
-						<NavBarMenuOption listItem="Home" showSubMenu={showSubMenu} />
-						<NavBarMenuOption
-							listItem="Checkout"
-							showSubMenu={showSubMenu}
-							tag={totalItemsBought}
-						/>
-						<NavBarMenuOption listItem="Profile" showSubMenu={showSubMenu} />
-						<NavBarMenuOption listItem="FAQ" showSubMenu={showSubMenu} />
-					</ul>
-					<div className="orderEnd">
-						<NavBarMenu onClick={HandleSubMenu} />
-					</div>
-				</div> */}
 			</nav>
 		</>
 	);

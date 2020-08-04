@@ -18,6 +18,8 @@
 	transition: 0.5s ease;
 }
 
+/* cubic-bezier(0.86, 0, 0.29, 0.97) */
+
 .hambuger div:before,
 .hambuger div:after {
 	content: "";

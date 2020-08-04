@@ -1,0 +1,32 @@
+.rating-container {
+	display: flex;
+	position: relative;
+	/* height: 40px; */
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.template-stars,
+.checked-stars {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.checked-stars {
+	color: gold;
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+}
+
+.star-container {
+	display: grid;
+}
+
+.star {
+	font-size: 75%;
+	display: flex;
+	width: 20%;
+	margin: 1%;
+}

@@ -1,0 +1,10 @@
+.section {
+	background-color: #fff;
+	padding: 0 10px 5px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.section h4 {
+	padding: 1rem 0 0;
+}

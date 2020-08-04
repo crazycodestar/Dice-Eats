@@ -5,7 +5,7 @@ const NavBarMenuOption = ({ listItem, tag = "", onClick }) => {
 	return (
 		<li key={listItem} className={`navBarListItem list amountMargin`}>
 			<a
-				className="nav-link navbar-dark listLink"
+				className="nav-link listLink"
 				href={`#${listItem}`}
 				style={{ padding: 0 }}
 				onClick={onClick}

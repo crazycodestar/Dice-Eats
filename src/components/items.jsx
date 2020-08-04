@@ -12,14 +12,16 @@ class Items extends Component {
 			<div className={style.style}>
 				{items.map((item) =>
 					item.visible ? (
-						<Card
-							key={item.name}
-							id={item.name}
-							item={item}
-							onIncrement={onIncrement}
-							onDecrement={onDecrement}
-							onReset={onReset}
-						/>
+						<div className={`${style["card-dimensions"]} m-1`}>
+							<Card
+								key={item.name}
+								id={item.name}
+								item={item}
+								onIncrement={onIncrement}
+								onDecrement={onDecrement}
+								onReset={onReset}
+							/>
+						</div>
 					) : (
 						""
 					)

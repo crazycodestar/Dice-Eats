@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Accordion, Card, Button, Collapse } from "react-bootstrap";
+import { Button, Collapse } from "react-bootstrap";
 import "./styles/Content.css";
 
 import Option from "./Option";
@@ -11,7 +11,7 @@ export default function AccordionMenu({ filters, onClick }) {
 			<Button
 				onClick={() => setOpen(!open)}
 				aria-expanded={open}
-				className="btn btn-outline-dark m-2 widthLoss"
+				className="btn btn-outline-dark w-100 mb-2 mt-2 widthLoss"
 				style={{ height: 40, transition: "0.5s ease" }}
 			>
 				{filters.name}

@@ -17,12 +17,45 @@ class App extends Component {
 		showSidebar: true,
 		items: itemsAsset,
 		searchBox: "",
+		filters: {
+			sortByOrder: {
+				name: "Sort By",
+				filter: [
+					{ name: "Prices", clicked: true },
+					{ name: "Popular", clicked: false },
+				],
+			},
+			filterPrice: {
+				name: "Filter Price",
+				filter: [],
+			},
+			filter: {
+				name: "Filter Products",
+				clicked: false,
+				filter: [],
+			},
+		},
 	};
 	constructor() {
 		super();
 		let order = itemsAsset;
 		order = order.sort((a, b) => (a.price > b.price ? 1 : -1));
-		this.setState({ items: order });
+		this.state.items = order;
+
+		let foodClass = [];
+		for (let food of itemsAsset) {
+			if (!foodClass.includes(food.foodClass)) {
+				foodClass.push(food.foodClass);
+			}
+		}
+		let filter = [{ name: "All", clicked: true }];
+
+		for (let item of foodClass) {
+			filter.push({ name: item, clicked: false });
+		}
+
+		let filters = { ...this.state.filters };
+		filters.filter.filter = filter;
 	}
 
 	// Card item functions
@@ -71,6 +104,24 @@ class App extends Component {
 	};
 
 	// sidebar functions
+
+	sortBy = (usecase) => {
+		let items = this.state.items;
+		switch (usecase) {
+		}
+		items = items.sort((a, b) => (a[usecase] > b[usecase] ? 1 : -1));
+		this.setState(items);
+		// this.state.items = order;
+	};
+
+	filterProducts = (setting) => {
+		for (let set of this.state.filter.filter) {
+			set.clicked = false;
+		}
+		setting.clicked = true;
+		this.props.onClick(setting);
+	};
+
 	handleSideBar = () => {
 		// hambugerMenu function
 		let showSidebar = this.state.showSidebar;
@@ -114,7 +165,7 @@ class App extends Component {
 							!this.state.showSidebar ? "floatSideBarShow" : "floatSideBarHide"
 						}`}
 					>
-						<Sidebar onClick={this.handleFilter} />
+						<Sidebar onClick={this.handleFilter} filters={this.state.filters} />
 					</div>
 					<div
 						className={`transitionEffect ${

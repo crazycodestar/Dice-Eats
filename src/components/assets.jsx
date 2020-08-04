@@ -31,7 +31,8 @@ const items = [
 		image: lemon,
 		info: "Lemons are sold in packs of five(5)",
 		price: 3000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -40,7 +41,8 @@ const items = [
 		image: apple,
 		info: "Apples are sold in packs of ten(10)",
 		price: 2000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 3,
 	},
 	{
 		amount: 0,
@@ -49,7 +51,8 @@ const items = [
 		image: banana,
 		info: "Bananas are sold in packs of ten(10)",
 		price: 500,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 2,
 	},
 	{
 		amount: 0,
@@ -58,7 +61,8 @@ const items = [
 		image: strawberry,
 		info: "strawberries are sold in packs of ten(10)",
 		price: 5000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -67,7 +71,8 @@ const items = [
 		image: strawberries,
 		info: "strawberries are sold in packs of ten(10)",
 		price: 5000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 4,
 	},
 	{
 		amount: 0,
@@ -76,7 +81,8 @@ const items = [
 		image: tangerines,
 		info: "tangerines are sold in packs of five(5)",
 		price: 800,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 2.3,
 	},
 	{
 		amount: 0,
@@ -85,7 +91,8 @@ const items = [
 		image: onion,
 		info: "onions are sold in packs of three(3)",
 		price: 1500,
-		foodClass: "vegetables",
+		foodClass: "Vegetables",
+		rating: 3,
 	},
 	{
 		amount: 0,
@@ -94,7 +101,8 @@ const items = [
 		image: potato,
 		info: "potatoes are sold in kilograms of two(2)",
 		price: 2000,
-		foodClass: "tubers",
+		foodClass: "Tubers",
+		rating: 3.5,
 	},
 	{
 		amount: 0,
@@ -103,7 +111,8 @@ const items = [
 		image: carrot,
 		info: "carrots are sold in packs of ten(10)",
 		price: 5000,
-		foodClass: "vegetables",
+		foodClass: "Vegetables",
+		rating: 2.5,
 	},
 	{
 		amount: 0,
@@ -112,7 +121,8 @@ const items = [
 		image: corn,
 		info: "corns are sold in packs of five(5)",
 		price: 2000,
-		foodClass: "vegetables",
+		foodClass: "Vegetables",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -121,7 +131,8 @@ const items = [
 		image: cucumber,
 		info: "cucumbers are sold in packs of five(5)",
 		price: 1000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -130,7 +141,8 @@ const items = [
 		image: grape,
 		info: "grapes are sold in packs of five(5) branches",
 		price: 5500,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -139,7 +151,8 @@ const items = [
 		image: guava,
 		info: "guavas are sold in packs of five(5)",
 		price: 500,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -148,7 +161,8 @@ const items = [
 		image: lime,
 		info: "limes are sold in packs of five(5)",
 		price: 1000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -157,7 +171,8 @@ const items = [
 		image: mango,
 		info: "mangos are sold in packs of five(5)",
 		price: 500,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -166,7 +181,8 @@ const items = [
 		image: tomatoes,
 		info: "tomatoes are sold in packs of three(3)",
 		price: 1500,
-		foodClass: "vegetables",
+		foodClass: "Vegetables",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -176,6 +192,7 @@ const items = [
 		info: "mangos are sold in packs of five(5)",
 		price: 500,
 		foodClass: "Grains, Beans and Nuts",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -184,7 +201,8 @@ const items = [
 		image: orange,
 		info: "oranges are sold in packs of five(5)",
 		price: 2500,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -193,7 +211,8 @@ const items = [
 		image: pineapple,
 		info: "pineapples are sold in pairs of two(2)",
 		price: 5000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -202,7 +221,8 @@ const items = [
 		image: watermelon,
 		info: "watermelons are sold in pairs of two(2)",
 		price: 8000,
-		foodClass: "fruits",
+		foodClass: "Fruits",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -212,6 +232,7 @@ const items = [
 		info: "Milks are sold in packs of five(5)",
 		price: 750,
 		foodClass: "Dairy Foods",
+		rating: 5,
 	},
 	{
 		amount: 0,
@@ -221,16 +242,18 @@ const items = [
 		info: "Meat are sold in kilos",
 		price: 2000,
 		foodClass: "Meat and Poultry",
+		rating: 5,
 	},
-	// {
-	// 	amount: 0,
-	// 	visible: true,
-	// 	name: "Cereal",
-	// 	image: cereal,
-	// 	info: "Cereals are sold per pack",
-	// 	price: 8000,
-	// 	foodClass: "fruits",
-	// },
+	{
+		amount: 0,
+		visible: true,
+		name: "Cereal",
+		image: cereal,
+		info: "Cereals are sold per pack",
+		price: 8000,
+		foodClass: "Cereal",
+		rating: 5,
+	},
 ];
 
 export default items;
